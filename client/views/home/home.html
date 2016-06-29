@@ -6,7 +6,7 @@
 				</div>
 			</div>
 		</div>
-		{{> HomeNewCustomComponent}}{{> HomeNewForm}}
+		{{> HomeNewCustomComponent}}
 	</div>
 </template>
 
@@ -31,27 +31,5 @@
 	</h2>
 	<code class="response">
 	</code>
-</template>
-
-<template name="HomeNewForm">
-	<div id="home-new-form" class="">
-		<form role="form">
-			{{#if errorMessage}}
-			<div class="alert alert-warning">
-				{{errorMessage}}
-			</div>
-			{{/if}}
-
-			{{#if infoMessage}}
-			<div class="alert alert-success">
-				{{infoMessage}}
-			</div>
-			{{/if}}
-			<div class="form-group">
-				<div class="submit-div">
-				</div>
-			</div>
-		</form>
-	</div>
 </template>
 
