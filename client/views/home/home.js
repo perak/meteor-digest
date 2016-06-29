@@ -41,14 +41,13 @@ Template.HomeNewCustomComponent.events({
 			},
 			function(values) {
 				Meteor.call("digestRequest", values, function(err, res) {
-					if(err) {
-						alert(err);
-                    }
-             console.log(res);
-                  	$(".response").text(res);
-                });
-            }
+				if(err) {
+					alert(err);
+				}
+					$(".response").text(res);
+				});
+			}
 		);
 		return false;      
-    }
+	}
 });
