@@ -1,0 +1,57 @@
+<template name="Home">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> HomeNewCustomComponent}}{{> HomeNewForm}}
+	</div>
+</template>
+
+<template name="HomeNewCustomComponent">
+	<div class="row">
+		<div class="col-xs-6">
+			<form>
+				<h2>
+					Request
+				</h2>
+				<input type="text" name="host" value="http://localhost:1337" class="form-control">
+				<input type="text" name="username" class="form-control">
+				<input type="password" name="password" class="form-control">
+				<button type="submit" class="btn">
+					Request
+				</button>
+			</form>
+		</div>
+	</div>
+	<h2>
+		Response:
+	</h2>
+	<code class="response">
+	</code>
+</template>
+
+<template name="HomeNewForm">
+	<div id="home-new-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group">
+				<div class="submit-div">
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+
